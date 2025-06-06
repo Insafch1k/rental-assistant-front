@@ -19,6 +19,34 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/profile/profile.module').then((p) => p.ProfileModule),
   },
+  {
+    path: 'properties',
+    loadChildren: () =>
+      import('./pages/properties/properties.module').then(
+        (p) => p.PropertiesModule
+      ),
+  },
+  {
+    path: 'properties/:id',
+    loadChildren: () =>
+      import('./pages/property-detail/property-detail.module').then(
+        (p) => p.PropertyDetailModule
+      ),
+  },
+  {
+    path: 'properties/edit/:id',
+    loadChildren: () =>
+      import('./pages/property-edit/property-edit.module').then(
+        (p) => p.PropertyEditModule
+      ),
+  },
+  {
+    path: 'properties/add',
+    loadChildren: () =>
+      import('./pages/property-add/property-add.module').then(
+        (p) => p.PropertyAddModule
+      ),
+  },
 ];
 
 @NgModule({

@@ -1,1 +1,20 @@
-<p>main works!</p>
+<div class="main-container">
+  <app-sidebar></app-sidebar>
+
+  <div class="dashboard">
+    <div class="properties-preview">
+      <h2>Мои объекты</h2>
+      <app-property-list [limit]="2"></app-property-list>
+    </div>
+
+    <div class="map-container">
+      <h2>Расположение объектов</h2>
+      <app-map></app-map>
+    </div>
+
+    <div class="notifications-container">
+      <h2>Важные уведомления</h2>
+      <app-notifications [limit]="5"></app-notifications>
+    </div>
+  </div>
+</div>

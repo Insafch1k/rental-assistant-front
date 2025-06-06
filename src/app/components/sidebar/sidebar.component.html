@@ -1,0 +1,38 @@
+<div class="sidebar">
+  <div class="logo">
+    <span class="logo-icon">🏠</span>
+  </div>
+
+  <nav class="nav-menu">
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      title="Главная"
+    >
+      <span class="icon">🏠</span>
+    </a>
+    <a routerLink="/properties" routerLinkActive="active" title="Все объекты">
+      <span class="icon">📋</span>
+    </a>
+    <a routerLink="/calendar" routerLinkActive="active" title="Календарь">
+      <span class="icon">📅</span>
+    </a>
+    <a routerLink="/clients" routerLinkActive="active" title="Клиенты">
+      <span class="icon">👥</span>
+    </a>
+    <a
+      routerLink="/notifications"
+      routerLinkActive="active"
+      title="Уведомления"
+    >
+      <span class="icon">🔔</span>
+    </a>
+  </nav>
+
+  <div class="user-menu">
+    <a routerLink="/settings" routerLinkActive="active" title="Настройки">
+      <span class="icon">⚙️</span>
+    </a>
+  </div>
+</div>

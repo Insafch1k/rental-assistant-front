@@ -1,0 +1,57 @@
+<div class="property-card">
+  <div class="property-image">
+    <img src="assets/placeholder-property.jpg" alt="Изображение объекта" />
+    <div
+      class="property-status"
+      [ngClass]="{
+        'status-rented': property.status === 'rented',
+        'status-available': property.status === 'available'
+      }"
+    >
+      {{ property.status === "rented" ? "Сдан" : "Свободен" }}
+    </div>
+  </div>
+
+  <div class="property-info">
+    <h3 class="property-title">{{ property.title }}</h3>
+    <p class="property-address">{{ property.address }}</p>
+
+    <div class="property-details">
+      <div class="detail">
+        <span class="icon">💰</span>
+        <span
+          >{{ property.price | currency : "RUB" : "symbol-narrow" }} /
+          мес.</span
+        >
+      </div>
+
+      <div class="detail" *ngIf="property.status === 'rented'">
+        <span class="icon">📅</span>
+        <span>До {{ property.endDate | date : "dd.MM.yyyy" }}</span>
+      </div>
+
+      <div
+        class="detail"
+        *ngIf="property.nextPayment && property.status === 'rented'"
+      >
+        <span class="icon">💸</span>
+        <span>Оплата {{ property.nextPayment | date : "dd.MM.yyyy" }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="property-actions">
+    <button class="btn-view" [routerLink]="['/properties', property.id]">
+      <span class="icon">👁️</span>
+    </button>
+    <button
+      class="btn-edit"
+      [routerLink]="['/properties', property.id, 'edit']"
+    >
+      <span class="icon">✏️</span>
+    </button>
+    <button class="btn-delete" (click)="onDelete()">
+      <span class="icon">🗑️</span>
+    </button>
+  </div>
+</div>
