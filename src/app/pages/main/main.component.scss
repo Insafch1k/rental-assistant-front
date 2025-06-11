@@ -12,11 +12,15 @@
 }
 
 .dashboard {
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   gap: 20px;
   padding: 20px;
+  overflow-y: auto;
+  height: 95%;
+  margin-bottom: 50px;
 
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;

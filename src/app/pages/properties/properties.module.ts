@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { PropertiesComponent } from './properties.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [PropertiesComponent],
+  imports: [SharedModule],
 })
-export class PropertiesModule { }
+export class PropertiesModule {}

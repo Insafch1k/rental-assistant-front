@@ -1,1 +1,13 @@
-<p>properties works!</p>
+<div class="property-container">
+  <app-sidebar></app-sidebar>
+
+  <div class="dashboard">
+    <div class="properties-preview">
+      <h2>Мои объекты</h2>
+      <app-property-list
+        [properties]="properties"
+        [limit]="9"
+      ></app-property-list>
+    </div>
+  </div>
+</div>

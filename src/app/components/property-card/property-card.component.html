@@ -1,6 +1,9 @@
 <div class="property-card">
   <div class="property-image">
-    <img src="assets/placeholder-property.jpg" alt="Изображение объекта" />
+    <img
+      [src]="property.imageUrl || '../../../assets/img/temp.png'"
+      all="Изображение объёкта"
+    />
     <div
       class="property-status"
       [ngClass]="{

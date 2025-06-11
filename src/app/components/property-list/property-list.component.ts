@@ -7,6 +7,7 @@ import { Property } from 'src/app/models/property';
   styleUrls: ['./property-list.component.scss'],
 })
 export class PropertyListComponent {
+  // Mock objects, need to realize some normal getter
   @Input() properties: Property[] = [];
-  @Input() limit: number = 10;
+  @Input() limit: number = 0;
 }
