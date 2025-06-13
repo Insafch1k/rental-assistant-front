@@ -1,1 +1,7 @@
-<router-outlet />
+<div class="app-container">
+  <app-sidebar [app]="this"></app-sidebar>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<app-notifications *ngIf="showNotifications"></app-notifications>

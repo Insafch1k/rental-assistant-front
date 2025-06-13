@@ -21,11 +21,7 @@
     <a routerLink="/clients" routerLinkActive="active" title="Клиенты">
       <span class="icon">👥</span>
     </a>
-    <a
-      routerLink="/notifications"
-      routerLinkActive="active"
-      title="Уведомления"
-    >
+    <a (click)="app.toggleNotifications()" title="Уведомления">
       <span class="icon">🔔</span>
     </a>
   </nav>

@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rental-assistant-front';
+
+  showNotifications = false;
+
+  toggleNotifications() {
+    this.showNotifications = !this.showNotifications;
+  }
 }
